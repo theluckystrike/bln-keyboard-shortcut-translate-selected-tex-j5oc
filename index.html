@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I set up a keyboard shortcut to translate text fast</title>
+<meta name="description" content="How I stopped copy-pasting into Google Translate and started translating selected text with one keystroke instead.">
+<link rel="canonical" href="https://belikenative.com/keyboard-shortcut-translate-selected-text/">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7;color:#333;background:#fff}
+h1{font-size:1.8em;line-height:1.3;margin-bottom:8px}
+h2{font-size:1.4em;margin-top:32px}
+h3{font-size:1.2em;margin-top:24px}
+p{margin:16px 0}
+a{color:#2563eb;text-decoration:none}
+a:hover{text-decoration:underline}
+ul{padding-left:24px}
+li{margin:8px 0}
+.source{color:#666;font-size:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #eee}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #eee;color:#666;font-size:14px}
+</style>
+</head>
+<body>
+<article>
+<h1>I set up a keyboard shortcut to translate text fast</h1>
+<div class="source">Originally published at <a href="https://belikenative.com/keyboard-shortcut-translate-selected-text/">belikenative.com/keyboard-shortcut-translate-selected-text</a></div>
+<p>I got tired of the copy-paste loop. Select text, open Google Translate, paste, read the result, copy the translation, go back to what I was doing. Full disclosure: I built <a href="https://belikenative.com">BeLikeNative</a>, a free Chrome extension for real-time grammar and writing help. Take my perspective accordingly.</p>
+<p>That said, the problem isn't specific to my tool. If you work with Spanish content (or any second language), you probably lose minutes every day switching between tabs just to translate a sentence. I wanted a single keystroke that would handle it.</p>
+<h2>Chrome already has translation built in</h2>
+<p>Most people don't realize Chrome can translate highlighted text without any extensions. Go to Chrome settings, find the Languages section, and make sure "Use Google Translate" is turned on. Then set Spanish (or whatever language you need) as your default translation target.</p>
+<p>Once that's configured, you highlight text on any page, right-click, and pick "Translate selection to Spanish." Chrome shows the result in a small popup near your selection. It works. It's not fast, but it works.</p>
+<p>The right-click approach has a problem though. Some sites disable the context menu entirely. If you run into that, pressing F12 to open DevTools can help you re-enable it, but at that point you're fighting the page just to translate a sentence.</p>
+<h2>Setting up a real keyboard shortcut</h2>
+<p>Chrome lets you assign keyboard shortcuts to any installed extension. Type `chrome://extensions/shortcuts` into your address bar and you'll see every extension listed with shortcut fields next to each action.</p>
+<p>Two options show up for each shortcut. "In Chrome" only fires when the browser window is active. "Global" works even when Chrome is in the background. For translation, "In Chrome" makes more sense since you're looking at the text you want translated.</p>
+<p>I'd suggest picking something like Ctrl+Shift+T. It's easy to hit and doesn't collide with standard browser shortcuts. Avoid anything that overlaps with your OS shortcuts or you'll end up toggling the wrong thing.</p>
+<h2>How I handle it with BeLikeNative</h2>
+<p>I built <a href="https://belikenative.com">BeLikeNative</a> partly because I wanted translation that didn't interrupt my flow. The default shortcut is Alt+2. You highlight text, press the keys, and the Spanish translation goes straight to your clipboard. No popup, no new tab. Just Ctrl+V wherever you need the result.</p>
+<p>The clipboard approach turned out to be the right call. I can translate something on a webpage and paste it into Slack, Google Docs, an email, or a code comment without switching context. It works across Chrome, Firefox, and Brave.</p>
+<p>Setting it up takes about a minute. Install the extension from the Chrome Web Store, click the icon near your address bar, and pick your target language in the settings. Spanish is the default for a lot of users, but <a href="https://belikenative.com">BeLikeNative</a> supports over 80 languages. You can also adjust the tone (formal, casual, professional) depending on what you're translating for.</p>
+<p>The free plan covers basic translation with a 500-character limit per use. If you need higher limits or want to customize shortcuts, the Learner plan runs $4/month and bumps you up to 4,000 characters with 50 daily uses.</p>
+<h2>Combining shortcuts for bigger tasks</h2>
+<p>Once you have a translation shortcut set up, pairing it with text selection shortcuts speeds things up. I use Ctrl+Shift+Arrow Keys to select word by word, then hit my translation shortcut. For longer passages, Ctrl+A grabs everything, though you'll want to be mindful of character limits.</p>
+<p>The pattern I settled on looks like this: select text, translate with Alt+2, switch tabs with Ctrl+Tab, paste with Ctrl+V. Four keystrokes and I've moved a translated sentence from one app to another. That sequence alone probably saves me 10 minutes a day compared to the old copy-paste-into-Google-Translate routine.</p>
+<h2>Macros for repetitive translation</h2>
+<p>If you're translating the same type of content regularly (product descriptions, support replies, social posts), macros can collapse multiple steps into one keystroke.</p>
+<p>On macOS, Keyboard Maestro pairs well with Translate Shell installed via Homebrew. You can build a macro that grabs selected text, runs it through the command line translator, and copies the Spanish output back to your clipboard automatically. On Windows, AutoHotkey does the same thing with a short script.</p>
+<p>For Google Workspace, Apps Script has a built-in Language service that handles translations directly inside Docs, Sheets, and Slides without any external API calls. I've seen teams use this to translate entire spreadsheet columns with a single script execution.</p>
+<h2>Switching languages without digging through menus</h2>
+<p>If you work with more than one language, constantly changing your target language gets old. In Google Translate, Ctrl+Shift+S (Cmd+Shift+S on Mac) flips your source and target languages instantly. That's useful when you need to go from Spanish back to English quickly.</p>
+<p>In <a href="https://belikenative.com">BeLikeNative</a>, your language preference sticks until you change it. Click the extension icon, pick a new target language, and Alt+2 translates into that language from then on. No restart, no page reload.</p>
+<h2>Where this is heading</h2>
+<p>I'm working on adding edge cases like translating text inside form fields and handling right-to-left languages more gracefully. The goal is the same as it's always been: one shortcut, zero friction, any language.</p>
+<p>I build <a href="https://belikenative.com">BeLikeNative</a>, a free Chrome extension that helps you write better English anywhere on the web. No signup, no data collection.</p>
+<div class="footer">
+<p>Read the original at <a href="https://belikenative.com/keyboard-shortcut-translate-selected-text/">belikenative.com/keyboard-shortcut-translate-selected-text</a></p>
+<p><a href="https://belikenative.com">BeLikeNative</a> is a free Chrome extension for real-time grammar checking and writing improvement.</p>
+</div>
+</article>
+</body>
+</html>
